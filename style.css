@@ -60,45 +60,50 @@ header .logo {
 
 
 header .title {
-  font-family: 'Dancing Script', cursive;
-  /* color      : var(--secondry-coloe); */
-  color: transparent;
-  font-size  : 1.8rem;
-  display: flex;
+  font-family    : 'Dancing Script', cursive;
+  /* color       : var(--secondry-coloe); */
+  color          : transparent;
+  font-size      : 1.8rem;
+  display        : flex;
   justify-content: center;
 }
-.title span{
-  animation: animate 3s linear infinite;
+
+.title span {
+  animation      : animate 3s linear infinite;
   animation-delay: calc(0.1s * var(--i));
 }
 
 @keyframes animate {
-  0%{
-    color: var(--secondry-coloe);
+  0% {
+    color : var(--secondry-coloe);
     filter: blur(1px) hue-rotate(0deg);
     text-shadow: 0 0 10px cyan,
-    0 0 20px cyan,
-    0 0 40px cyan,
-    0 0 60px cyan;
+      0 0 20px cyan,
+      0 0 40px cyan,
+      0 0 60px cyan;
     /* 0 0 120px cyan; */
     /* 0 0 200px cyan; */
   }
-  30%,70%{
-    color: var(--secondry-coloe);
+
+  30%,
+  70% {
+    color : var(--secondry-coloe);
     filter: blur(1px) hue-rotate(360deg);
     text-shadow: 0 0 10px cyan,
-    0 0 20px cyan,
-    0 0 40px cyan;
+      0 0 20px cyan,
+      0 0 40px cyan;
     /* 0 0 80px cyan; */
     /* 0 0 120px cyan; */
     /* 0 0 200px cyan; */
   }
-  100%{
-    color: transparent;
-    filter: blur(1px) hue-rotate(0deg);
+
+  100% {
+    color      : transparent;
+    filter     : blur(1px) hue-rotate(0deg);
     text-shadow: none;
   }
 }
+
 header .links {
   height     : 100%;
   display    : flex;
@@ -129,7 +134,7 @@ header .links {
 
 .links li:hover a {
   color: var(--main-color);
-  
+
 }
 
 
@@ -148,7 +153,7 @@ header .links {
   padding    : 20px;
   display    : flex;
   align-items: center;
-  margin-top : 20px;
+  margin-top : 60px;
   background : var(--bg-color);
 }
 
@@ -376,18 +381,18 @@ header .links {
 }
 
 .contact-info {
-  position     : relative;
-  width        : 95%;
-  max-width    : 650px;
-  min-height: 40vh;
-  justify-self : center;
-  align-self   : center;
-  text-align   : center;
-  background   : rgba(112, 128, 144, 0.7);
-  padding      : 5vh 20px;
-  border-radius: 2px;
-  display: flex;
-  flex-direction: column;
+  position       : relative;
+  width          : 95%;
+  max-width      : 650px;
+  min-height     : 40vh;
+  justify-self   : center;
+  align-self     : center;
+  text-align     : center;
+  background     : rgba(112, 128, 144, 0.7);
+  padding        : 5vh 20px;
+  border-radius  : 2px;
+  display        : flex;
+  flex-direction : column;
   justify-content: space-around;
 }
 
@@ -440,7 +445,7 @@ header .links {
 footer {
   background     : rgba(112, 128, 144, 0.7);
   color          : rgba(0, 255, 255, 0.8);
-  /* color: darkcyan; */
+  /* color       : darkcyan; */
   display        : flex;
   align-items    : center;
   justify-content: center;
@@ -464,7 +469,7 @@ footer {
 
   header .logo {
     margin-left: 0;
-    
+
   }
 
   header .logo,
@@ -512,7 +517,7 @@ footer {
 
   .contact-info ul {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 20px;
+    grid-gap             : 20px;
   }
 
   /* .contact-item:last-of-type{
@@ -524,9 +529,11 @@ footer {
   .links li a {
     font-size: .8rem;
   }
-  .text-conatainer{
-    margin-top: 40px;
+
+  .text-conatainer {
+    margin-top: 100px;
   }
+
   .typing {
     font-size: 1rem;
   }
@@ -541,7 +548,8 @@ footer {
     grid-template-columns: 1fr 1fr;
 
   }
-  footer{
+
+  footer {
     font-size: 75%;
   }
 }
