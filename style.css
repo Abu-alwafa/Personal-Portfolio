@@ -76,7 +76,7 @@ header .title {
 @keyframes animate {
   0% {
     color : var(--secondry-coloe);
-    filter: blur(1px) hue-rotate(0deg);
+    filter: hue-rotate(0deg);
     text-shadow: 0 0 10px cyan,
       0 0 20px cyan,
       0 0 40px cyan,
@@ -88,18 +88,18 @@ header .title {
   30%,
   70% {
     color : var(--secondry-coloe);
-    filter: blur(1px) hue-rotate(360deg);
+    filter: hue-rotate(360deg);
     text-shadow: 0 0 10px cyan,
       0 0 20px cyan,
-      0 0 40px cyan;
-    /* 0 0 80px cyan; */
+      0 0 40px cyan,
+      0 0 60px cyan;
     /* 0 0 120px cyan; */
     /* 0 0 200px cyan; */
   }
 
   100% {
     color      : transparent;
-    filter     : blur(1px) hue-rotate(0deg);
+    filter     : hue-rotate(0deg);
     text-shadow: none;
   }
 }
@@ -490,7 +490,6 @@ footer {
   }
 
   .p-skills {
-    padding              : 85px 0;
     grid-template-columns: 1fr;
     grid-gap             : 0;
     background           : rgba(112, 128, 144, 0.7);
@@ -523,6 +522,11 @@ footer {
   /* .contact-item:last-of-type{
     grid-column: 2.5/3;
   } */
+
+  .p-skills,
+  .certificate {
+    padding: 20px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -551,5 +555,17 @@ footer {
 
   footer {
     font-size: 75%;
+  }
+}
+
+@media (hover: none) {
+  .links li:hover {
+    background: inherit;
+
+  }
+
+  .links li:hover a {
+    color: inherit;
+
   }
 }
