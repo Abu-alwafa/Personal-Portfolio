@@ -1,6 +1,7 @@
 window.onscroll = function () {
   const skillsPage = document.getElementById('p-skills');
   const progressSpans = document.querySelectorAll('.progress p span');
+  const upButton = document.querySelector('.up-button');
   const certificatesPage = document.getElementById('projects');
   progressSpans.forEach(span => {
     if ((window.scrollY >= skillsPage.offsetTop - 300) && (window.scrollY < certificatesPage.offsetTop - 300)) {
@@ -9,7 +10,7 @@ window.onscroll = function () {
     else {
       span.style.width = '0%';
     }
-
+    window.scrollY >= skillsPage.offsetTop ? upButton.style.display = 'block' : upButton.style.display = 'none';
   })
 
 };
