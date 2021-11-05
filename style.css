@@ -152,11 +152,10 @@ header .links {
 }
 
 .text-conatainer {
-  width         : 90%;
-  max-width     : 650px;
-  color         : var(--secondry-coloe);
-  padding       : 20px;
-  
+  width    : 90%;
+  max-width: 650px;
+  color    : var(--secondry-coloe);
+  padding: 20px;
 }
 
 
@@ -172,9 +171,9 @@ header .links {
 }
 
 .summary {
-  width     : 90%;
-  max-width : 650px;
-  text-align: center;
+  width      : 90%;
+  max-width  : 650px;
+  text-align : center;
   color      : cyan;
   text-shadow: 0 0 2px black;
 }
@@ -451,7 +450,11 @@ footer {
 }
 
 .up-button {
-  display: none;
+  display   : none;
+  position  : fixed;
+  bottom    : 20px;
+  right     : 20px;
+  z-index: 10;
 }
 
 .up-button a {
@@ -465,10 +468,7 @@ footer {
   background     : darkcyan;
   display        : flex;
   justify-content: center;
-  position       : fixed;
-  bottom         : 15px;
-  right          : 0;
-  transition     : .25s;
+  transition: .25s linear;
 
 }
 
@@ -485,11 +485,15 @@ footer {
 }
 
 @media (max-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+
   header {
     grid-template-columns   : 1fr;
     grid-template-rows      : 75px 75px;
     /* height               : 100vh; */
-    position                : static;
+    position                : absolute;
     background              : transparent;
   }
 
@@ -568,9 +572,11 @@ footer {
   .typing {
     font-size: 1rem;
   }
-  .summary h4{
+
+  .summary h4 {
     font-size: 80%;
   }
+
   .certificate .cards {
     grid-template-columns: 1fr;
     width                : 80vw;
