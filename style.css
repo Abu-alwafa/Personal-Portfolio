@@ -9,7 +9,7 @@
 body,
 html {
   min-height      : 100vh;
-  min-width: 100%;
+  min-width       : 100%;
   font-family     : 'Zen Kurenaido', sans-serif;
   --main-color    : #263238;
   --secondry-coloe: #f1f1f1;
@@ -80,7 +80,7 @@ header .title {
 
 @keyframes animate {
   0% {
-    color : var(--secondry-coloe);
+    color    : var(--secondry-coloe);
     /* filter: hue-rotate(0deg); */
     text-shadow: 0 0 10px cyan,
       0 0 20px cyan,
@@ -90,7 +90,7 @@ header .title {
 
   30%,
   70% {
-    color : var(--secondry-coloe);
+    color    : var(--secondry-coloe);
     /* filter: hue-rotate(360deg); */
     text-shadow: 0 0 10px cyan,
       0 0 20px cyan,
@@ -130,7 +130,7 @@ header .links {
 }
 
 .links li:hover {
-  background: var(--secondry-coloe);
+  background: cyan;
 
 }
 
@@ -146,40 +146,42 @@ header .links {
   flex-direction : column;
   align-items    : center;
   justify-content: center;
-  position: relative;
+  position       : relative;
 }
 
 .text-conatainer {
-  width    : 60%;
-  height: 50vh;
-  max-width: 650px;
-  color    : var(--secondry-coloe);
-  padding: 20px 40px;
+  width           : 60%;
+  height          : 50vh;
+  max-width       : 650px;
+  color           : var(--secondry-coloe);
+  padding         : 20px 40px;
+  border          : 1px solid lightsteelblue;
+  border-radius   : 2px;
   background-color: var(--bg-color);
-  text-align    : center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-30%);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
+  text-align      : center;
+  position        : absolute;
+  top             : 50%;
+  left            : 50%;
+  transform       : translate(-50%, -30%);
+  display         : flex;
+  flex-direction  : column;
+  justify-content : space-evenly;
+  align-items     : center;
 }
 
 
 .typing {
-  height        : 100px;
-  width         : 100%;
-  font-size     : 1.3rem;
-  border-radius : 2px;
-  
+  height       : 100px;
+  width        : 100%;
+  font-size    : 1.3rem;
+  border-radius: 2px;
+
   color         : var(--secondry-coloe);
   letter-spacing: 1px;
 }
 
 .summary {
-  color      : cyan;
+  color: cyan;
 }
 
 .summary h4 {
@@ -196,7 +198,7 @@ header .links {
 
 .skills-container,
 .prod-and-hobbies {
-  background     : rgba(176, 196, 222, 0.3);
+  background   : rgba(176, 196, 222, 0.3);
   padding      : 0 20px;
   border-radius: 2px;
 }
@@ -207,9 +209,9 @@ header .links {
 }
 
 .progress {
-  width           : 300px;
-  margin          : auto;
-  margin-bottom   : 10px;
+  width        : 300px;
+  margin       : auto;
+  margin-bottom: 10px;
 }
 
 .progress h4 {
@@ -245,35 +247,29 @@ header .links {
 
 .most-prod,
 .hobbies {
-  width        : 100%;
-  max-width    : 350px;
-  height       : 175px;
-  position     : relative;
-  top          : 0;
-  left         : 50%;
-  transform    : translateX(-50%);
-  background   : var(--bg-color);
-  /* border-radius: 2px; */
-  z-index      : 5;
+  width     : 100%;
+  max-width : 350px;
+  height    : 175px;
+  position  : relative;
+  top       : 0;
+  left      : 50%;
+  transform : translateX(-50%);
+  background: var(--bg-color);
+  z-index   : 5;
 }
 
 .most-prod .item,
 .hobbies .item {
-  width             : 100%;
-  height            : 100%;
-  /* display        : flex;
-  flex-direction    : column;
-  align-items       : center;
-  justify-content   : center;*/
-  text-align        : center;
-  padding           : 20px;
-  position          : absolute;
-  top               : 0;
-  left              : 50%;
-  transform         : translateX(-50%);
-  visibility        : hidden;
-  opacity           : 0;
-  transition        : .5s ease-in;
+  width     : 100%;
+  height    : 100%;
+  text-align: center;
+  padding   : 20px;
+  position  : absolute;
+  left      : 50%;
+  transform : translate(-50%);
+  visibility: hidden;
+  opacity   : 0;
+  transition: .5s ease-in;
 }
 
 .hobbies .item {
@@ -286,14 +282,16 @@ header .links {
 }
 
 .hobbies .item .icon {
-  font-size      : 2rem;
+  font-size   : 2rem;
   margin-right: 20px;
   margin-top  : 4px;
   color       : darkcyan;
 }
-.icon i{
-  font-size      : 2rem;
+
+.icon i {
+  font-size: 2rem;
 }
+
 .most-prod .item p {
   width : 90%;
   margin: auto;
@@ -350,14 +348,15 @@ header .links {
 }
 
 .card:hover img {
-  filter   : brightness(80%) saturate(150%);
-  transform: translateY(-5px);
+  filter    : brightness(90%) saturate(150%);
+  transform : translateY(-5px);
+  box-shadow: 0 10px 20px cyan;
 
 }
 
 .card:hover .card-title {
-  transform : translateY(5px);
-  box-shadow: 0px 0px 5px gray;
+  transform: translateY(10px) scale(1.1);
+
 }
 
 .card img {
@@ -377,10 +376,10 @@ header .links {
 
 /* contact me start  */
 .contact-me {
-  height               : 100vh;
-  display              : grid;
-  grid-template-columns: 1fr;
-  grid-template-rows   : auto 75px;
+  height                  : 100vh;
+  display                 : grid;
+  grid-template-columns   : 1fr;
+  grid-template-rows      : auto 75px;
   /* background           : var(--main-color); */
 }
 
@@ -392,13 +391,13 @@ header .links {
   justify-self   : center;
   align-self     : center;
   text-align     : center;
-  background     :var(--bg-color);
+  background     : var(--bg-color);
   padding        : 5vh 20px;
   border-radius  : 2px;
   display        : flex;
   flex-direction : column;
   justify-content: space-around;
-  border: 1px solid lightsteelblue;
+  border         : 1px solid lightsteelblue;
 }
 
 /* .contact-info h1 {
@@ -414,12 +413,12 @@ header .links {
 }
 
 .contact-info ul {
-  width                : 100%;
-  padding              : 20px 0;
-  display              : grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-gap             : 10px;
-  margin-top           : 50px;
+  width                   : 100%;
+  padding                 : 20px 0;
+  display                 : grid;
+  grid-template-columns   : 1fr 1fr 1fr 1fr 1fr;
+  grid-gap                : 10px;
+  margin-top              : 50px;
   /* background           : var(--main-color); */
 }
 
@@ -436,32 +435,38 @@ header .links {
 }
 
 .contact-item a i {
-  color    : darkcyan;
-  font-size: 1.3rem;
-  position : relative;
-  top      : 2px;
+  color     : darkcyan;
+  font-size : 1.3rem;
+  position  : relative;
+  top       : 2px;
+  transition: .25s ease;
 }
 
 .contact-item:hover a {
-  transform: translateY(5px);
-  color    : darkcyan;
+  text-shadow: 0 0 10px cyan, 0 0 20px cyan;
+  filter     : brightness(150%);
+}
+
+.contact-item:hover a i {
+  text-shadow: 0 0 20px cyan, 0 0 30px cyan, 0 0 40px cyan;
+  filter     : brightness(150%);
 }
 
 footer {
   background     : rgba(176, 196, 222, 0.3);
   color          : rgba(0, 255, 255, 0.8);
-  color       : var(--secondry-coloe);
+  color          : var(--secondry-coloe);
   display        : flex;
   align-items    : center;
   justify-content: center;
 }
 
 .up-button {
-  display   : none;
-  position  : fixed;
-  bottom    : 20px;
-  right     : 20px;
-  z-index: 10;
+  display : none;
+  position: fixed;
+  bottom  : 20px;
+  right   : 20px;
+  z-index : 10;
 }
 
 .up-button a {
@@ -473,23 +478,25 @@ footer {
   padding        : 5px 5px 5px 3px;
   border-radius  : 2px;
   background     : var(--main-color);
-  border: 1px solid var(--secondry-coloe);
+  border         : 1px solid var(--secondry-coloe);
   display        : flex;
   justify-content: center;
-  transition: .25s linear;
+  transition     : .25s linear;
 
 }
 
 .up-button:hover a {
   color     : var(--main-color);
   background: cyan;
-  border: none;
+  border    : 1px solid cyan;
 }
-@media (min-width: 768px){
-  .contact-info{
+
+@media (min-width: 768px) {
+  .contact-info {
     margin-top: 75px;
   }
 }
+
 /* contact me end  */
 @media (max-width: 1200px) {
   .certificate .cards {
