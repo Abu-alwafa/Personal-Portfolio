@@ -32,7 +32,7 @@ html {
 }
 
 .container {
-  background-image     : linear-gradient(115deg, rgb(0, 0, 0, .8), rgb(0, 0, 0, 0.5)), url('https://datatime4it.com/wp-content/uploads/2021/10/%D8%B4%D8%B1%D9%83%D8%A7%D8%AA-it-%D9%81%D9%8A-%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9.jpg');
+  background-image     : linear-gradient(115deg, rgb(0, 0, 0, .8), rgb(0, 0, 0, 0.5)), url('websiteBG.jpg');
   background-size      : cover;
   background-repeat    : no-repeat;
   background-position  : center;
@@ -215,11 +215,12 @@ header .links {
 }
 
 .progress h4 {
-  margin-bottom: 10px;
+  margin-top: 20px;
 }
 
 .progress p {
-  border  : 1px solid lightsteelblue;
+  border  : 1px solid var(--secondry-coloe);
+  border-radius: 2px;
   width   : 100%;
   height  : 11px;
   position: relative;
@@ -227,7 +228,8 @@ header .links {
 
 .progress p span {
 
-  background: rgb(0, 0, 0, .6);
+  background: darkcyan;
+  box-shadow: 0 0 10px cyan, 0 0 20px cyan;
   position  : absolute;
   display   : inline-block;
   height    : 10px;
@@ -237,12 +239,12 @@ header .links {
 
 .skills-container {
   display           : grid;
-  grid-template-rows: 90px 1.5fr 90px 1fr;
+  grid-template-rows: 75px 1.5fr 75px 1fr;
 }
 
 .prod-and-hobbies {
   display           : grid;
-  grid-template-rows: 90px 1fr 90px 1fr;
+  grid-template-rows: 75px 1fr 75px 1fr;
 }
 
 .most-prod,
@@ -254,7 +256,7 @@ header .links {
   top       : 0;
   left      : 50%;
   transform : translateX(-50%);
-  background: var(--bg-color);
+
   z-index   : 5;
 }
 
@@ -270,8 +272,8 @@ header .links {
   visibility: hidden;
   opacity   : 0;
   transition: .5s ease-in;
+  
 }
-
 .hobbies .item {
   font-size      : .9rem;
   font-weight    : 500;
@@ -279,21 +281,27 @@ header .links {
   align-items    : center;
   justify-content: center;
   padding        : 0;
+  
 }
-
+.hobbies .item h2{
+  letter-spacing: 2px;
+}
 .hobbies .item .icon {
   font-size   : 2rem;
   margin-right: 20px;
   margin-top  : 4px;
-  color       : darkcyan;
 }
 
 .icon i {
   font-size: 2rem;
+  color           : cyan;
+  text-shadow: 0 0 10px darkcyan;
 }
 
 .most-prod .item p {
   width : 90%;
+  font-weight: 600;
+  letter-spacing: 1px;
   margin: auto;
 }
 
@@ -304,7 +312,9 @@ header .links {
   /* margin-bottom: 20px; */
   /* color        : rgb(105, 0, 35); */
   /* color        : indigo; */
-  color           : darkcyan;
+  color           : cyan;
+  text-shadow: 0 0 10px darkcyan;
+
 }
 
 @keyframes slideIn {
@@ -512,7 +522,6 @@ footer {
   header {
     grid-template-columns   : 1fr;
     grid-template-rows      : 75px 75px;
-    /* height               : 100vh; */
     position                : absolute;
     background              : transparent;
   }
@@ -536,10 +545,6 @@ footer {
     padding-top: 50px;
   }
 
-  /* .summary {
-    width: 80%;
-  } */
-
   .p-skills {
     grid-template-columns: 1fr;
     grid-gap             : 0;
@@ -553,8 +558,8 @@ footer {
   }
 
   .title {
-    text-align: center;
-    background: var(--main-color);
+    padding-left: 20px;
+
   }
 
   .progress {
