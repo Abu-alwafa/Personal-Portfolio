@@ -12,12 +12,12 @@ window.onscroll = function () {
     }
     window.scrollY >= skillsPage.offsetTop ? upButton.classList.add('show') : upButton.classList.remove('show');
   })
-  upButton.addEventListener('click', () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  }) 
+  // upButton.addEventListener('click', () => {
+  //   window.scrollTo({
+  //     top: 0,
+  //     behavior: "smooth"
+  //   });
+  // }) 
 };
 function slider() {
   let index1 = 0;
