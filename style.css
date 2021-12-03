@@ -5,11 +5,8 @@
   padding: 0;
   margin : 0;
 }
-
-body,
-html {
-  min-height      : 100vh;
-  min-width       : 100%;
+body,html{
+  height      : 100vh;
   font-family     : 'Zen Kurenaido', sans-serif;
   --main-color    : #263238;
   --secondry-coloe: #f1f1f1;
@@ -17,6 +14,7 @@ html {
   background      : var(--main-color);
   scroll-behavior : smooth;
 }
+
 
 ::-webkit-scrollbar {
   width: 10px;
@@ -472,30 +470,32 @@ footer {
 }
 
 .up-button {
-  display : none;
   position: fixed;
-  bottom  : 20px;
-  right   : 20px;
+  bottom  : 0px;
+  right   : -40px;
   z-index : 10;
+  transition: .25s;
 }
-
-.up-button a {
+.up-button.show{
+  right: 0;
+}
+.up-button a, .up-button span {
   text-decoration: none;
   color          : var(--secondry-coloe);
-  font-size      : 1.5rem;
+  font-size      : 1rem;
   display        : inline-block;
   width          : 30px;
-  padding        : 5px 5px 5px 3px;
+  padding        :6px 3px 6px 2px;
   border-radius  : 2px;
   background     : var(--main-color);
   border         : 1px solid var(--secondry-coloe);
   display        : flex;
   justify-content: center;
-  transition     : .25s linear;
+  transition     : .25s ease;
 
 }
 
-.up-button:hover a {
+.up-button:hover a, .up-button:hover span {
   color     : var(--main-color);
   background: cyan;
   border    : 1px solid cyan;
@@ -521,7 +521,7 @@ footer {
 
   header {
     grid-template-columns   : 1fr;
-    grid-template-rows      : 75px 75px;
+    grid-template-rows      : 70px 70px;
     position                : absolute;
     background              : transparent;
   }
@@ -587,7 +587,7 @@ footer {
 
 @media (max-width: 576px) {
   .links li a {
-    font-size: .8rem;
+    font-size: .7rem;
   }
 
   /* .text-conatainer {
@@ -595,7 +595,7 @@ footer {
   } */
 
   .typing {
-    font-size: 1rem;
+    font-size: 80%;
   }
 
   .summary h4 {
@@ -615,5 +615,8 @@ footer {
 
   footer {
     font-size: 90%;
+  }
+  .up-button.show{
+    right: 20px;
   }
 }

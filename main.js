@@ -10,9 +10,14 @@ window.onscroll = function () {
     else {
       span.style.width = '0%';
     }
-    window.scrollY >= skillsPage.offsetTop ? upButton.style.display = 'block' : upButton.style.display = 'none';
+    window.scrollY >= skillsPage.offsetTop ? upButton.classList.add('show') : upButton.classList.remove('show');
   })
-
+  upButton.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }) 
 };
 function slider() {
   let index1 = 0;
